@@ -7,7 +7,9 @@ function SwipeToSlide() {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 5,
+    slidesToScroll: 5,
     swipeToSlide: true,
+    draggable: true,
     afterChange: function(index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
@@ -15,7 +17,7 @@ function SwipeToSlide() {
     }
   };
   return (
-    <div className="slider-container">
+    <div className="slider-container swipe-to-slide">
       <Slider {...settings}>
         <div>
           <h3>1</h3>
